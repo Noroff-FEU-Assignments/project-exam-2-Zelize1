@@ -1,0 +1,14 @@
+.course-card-body {
+  border-style: none;
+  padding-left: 0;
+}
+
+.course-card {
+  border-style: none;
+  background-color: transparent !important;
+}
+
+.card-container {
+  max-width: 90%;
+}
+/*# sourceMappingURL=courses.css.map */

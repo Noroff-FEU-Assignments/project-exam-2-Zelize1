@@ -1,0 +1,22 @@
+p {
+    font-family: $font-secondary;
+}
+
+h1, h2, h3, h4, h5, a {
+    font-family: $font-primary;
+    color: $colour-primary;
+}
+
+.btn-primary {
+    background-color: $colour-primary;
+    border-color: $colour-secondary;
+    color: $colour-secondary;
+    font-family: $font-primary;
+}
+
+.btn-primary:hover {
+    background-color: #e65a25;
+    border-color: $colour-secondary;
+    color: $colour-secondary;
+    font-family: $font-primary;
+}

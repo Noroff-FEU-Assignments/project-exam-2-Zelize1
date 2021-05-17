@@ -1,0 +1,34 @@
+.aboutImg {
+  width: 250px;
+  float: right;
+}
+
+.container .aboutContainer {
+  width: 70%;
+  margin: auto;
+}
+
+.aboutText {
+  float: left;
+  padding-left: 30px;
+  padding-top: 30px;
+  text-align: left;
+}
+
+@media (max-width: 1075px) {
+  .aboutImg {
+    width: 250px;
+    margin: auto;
+    display: block;
+  }
+  .container .aboutContainer {
+    width: 70%;
+    margin: auto;
+  }
+  .aboutText {
+    padding-left: 30px;
+    padding-top: 30px;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=about.css.map */
