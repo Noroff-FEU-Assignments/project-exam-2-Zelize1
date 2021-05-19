@@ -13,9 +13,12 @@ function Layout() {
     <Router>
         <Navbar bg="light" expand="lg">
     <NavLink to="/" exact>
-        <a href="/" className="navbar-left">
-            <img src="logo.png" alt="Solhjerter" className="navbar-logo"/>
-        </a>
+        <Navbar.Brand href="/">
+            <a href="/" className="logo-text"><span id="sol">SOL</span><span id="hjerter">HJERTER</span></a>
+        </Navbar.Brand>
+        <Navbar.Brand href="/" id="navbar-logo-text">
+            <img src="icon.png" className="navbar-icon" alt="Solhjerter"/>
+        </Navbar.Brand>
     </NavLink>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">

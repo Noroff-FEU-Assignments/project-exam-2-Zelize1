@@ -11,8 +11,30 @@
     transition: 0.25s;
 }
 
+.logo-text {
+    font-family: $font-logo;
+}
+
+#sol {
+    font-weight: 600;
+    color: #f0a54b;
+}
+
+#hjerter {
+    font-weight: 900;
+}
+
+.logo-text:hover {
+    color: $colour-primary;
+    text-decoration: none;
+}
+
 .navbar-logo {
-    width: 45%;
+    width: 40%;
+}
+
+.navbar-icon {
+    display: none;
 }
 
 .navbar-light .navbar-brand {
@@ -32,4 +54,16 @@ background: -moz-radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(171,169,165,0.1
 background: -webkit-radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(171,169,165,0.16150210084033612) 67%, rgba(195,193,190,0.1026785714285714) 100%);
 background: radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(171,169,165,0.16150210084033612) 67%, rgba(195,193,190,0.1026785714285714) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#c3c1be",GradientType=1);
-  }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-logo {
+        display: none;
+    }
+
+    .navbar-icon {
+        display: none;
+        width: 55%;
+
+    }
+}

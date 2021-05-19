@@ -18,3 +18,8 @@ bottom: initial;
 .carousel-indicators .active {
     background-color: $colour-primary;
 }
+
+.carousel-text {
+    color: white;
+    text-shadow: 1px 2px black;
+}

@@ -2,59 +2,74 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { baseUrl } from "../../settings/constants/api";
+import { useState, useEffect } from "react";
+import Heading from "../layout/Heading";
+
 export default function Courses() {
+    const [courses, setCourses] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const coursesUrl = baseUrl + "/courses";
+
+    useEffect(function () {
+        async function fetchCourses() {
+            try {
+                const response = await fetch(coursesUrl);
+
+                if (response.ok) {
+                    const json = await response.json();
+                    console.log(json);
+                    setCourses(json);
+                } else {
+                    setError("Can't load courses");
+                }
+            } catch (error) {
+                setError(error.toString());
+            } finally {
+                setLoading(false);
+            }
+        }
+        fetchCourses();
+
+    }, );
+
+    if (loading) {
+        return <div>Laster inn...</div>;
+    }
+
+    if (error) {
+        return <div>Kunne ikke laste innhold...</div>
+    }
+
     return (
         <>
+
+        <Heading title="Kurs"/>
         
             <Container className="card-container">
-                <Row>
+            <Row>
+            {courses.map(function (course) {
+                return <>
+            
                     <Col>
-                        <Card className="course-card" style={
+                        <Card className="course-card" key={course.id} style={
                             {width: '18rem'}
                         }>
-                            <Card.Img variant="top" src="yoga1.jpg" className="course-card-img" style={{height: "13rem"}}/>
+                            <Card.Img variant="top" src={baseUrl + course.Image.url}  className="course-card-img" style={{height: "13rem"}}/>
                             <Card.Body className="course-card-body">
-                                <Card.Title>Kurstittel</Card.Title>
+                                <Card.Title>{course.Title}</Card.Title>
                                 <Card.Text>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at malesuada metus, 
-                                non finibus neque. Aliquam sit amet magna mauris. 
-                                Maecenas et purus ligula. 
+                                    {course.Description} 
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col>
-                        <Card className="course-card" style={
-                            {width: '18rem'}
-                        }>
-                            <Card.Img variant="top" src="yoga2.jpg" style={{height: "13rem"}}/>
-                            <Card.Body className="course-card-body">
-                                <Card.Title>Kurstittel</Card.Title>
-                                <Card.Text>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at malesuada metus, 
-                                non finibus neque. Aliquam sit amet magna mauris. 
-                                Maecenas et purus ligula.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <Card className="course-card" style={
-                            {width: '18rem'}
-                        }>
-                            <Card.Img variant="top" src="yoga3.jpg" style={{height: "13rem"}}/>
-                            <Card.Body className="course-card-body">
-                                <Card.Title>Kurstittel</Card.Title>
-                                <Card.Text>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at malesuada metus, 
-                                non finibus neque. Aliquam sit amet magna mauris. 
-                                Maecenas et purus ligula.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
                 
+                </>
+                })}
+                </Row>
             </Container>
         
         </>

@@ -66,7 +66,42 @@
 @media screen and (max-width: 1250px) {
     .left-container, .right-container {
         width: 100%;
-        height: 300px;
         float: none;
+        margin-bottom: -25%;
     }
+
+    .split-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-directions-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-directions, .contact-maps {
+        width: 50%;
+        display: block;
+        margin: auto;
+        width: 90%;  
+    }
+
+    .contact-directions {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contact-maps {
+        margin-top: 30px;
+    }
+
+    .signup-form input, .signup-form textarea {
+        width: 80%;
+    }
+
+    .contact-submit {
+        width: 40%;
+    }
+    
 }

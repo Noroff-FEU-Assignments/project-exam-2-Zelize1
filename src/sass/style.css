@@ -7,6 +7,17 @@
 .navbar-light .navbar-nav .nav-link:hover {
   color: #e65a25;
   text-decoration: underline;
+  text-decoration-thickness: 10%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.navbar-logo {
+  width: 38%;
+}
+
+#navbar-logo-text {
+  display: none;
 }
 
 .navbar-light .navbar-brand {
@@ -17,6 +28,23 @@
 
 .navbar-light .navbar-brand:hover {
   color: #e65a25;
+}
+
+body {
+  background: #020024;
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(171, 169, 165, 0.161502) 67%, rgba(195, 193, 190, 0.102679) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#c3c1be",GradientType=1);
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-logo {
+    display: none;
+  }
+  #navbar-logo-text {
+    font-family: "Roboto Condensed", sans-serif;
+    display: block;
+    float: left;
+  }
 }
 
 .container {
@@ -93,7 +121,7 @@ p {
 }
 
 .footer {
-  background-color: white;
+  background-color: RGBA(255, 255, 255, 0.5);
   border-top: 1px solid rgba(201, 200, 200, 0.3);
   text-align: center;
   padding: 20px;

@@ -25,21 +25,19 @@ export default function Contact() {
             </Button>
     </form>
             </div>
-            <div className="vertical-line"></div>
             <div className="right-container">
             <Heading title="Hvor finner du oss?" />
             
             <div className="contact-directions-container">
             <p className="contact-directions">
-            Adresseveien 1 
-                Adresse 9123
+            Skarmokkvegen 662, 9030 Sjursnses
+
             Veibeskrivelse: 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at malesuada metus, non finibus neque. 
-            Aliquam sit amet magna mauris. 
-            Maecenas et purus ligula. 
+            Nordover ut fra Tromsø mot Nordkjosbotn. På Fagernes ta til venstre mot Breivikeidet og ned til Sjursnes
+            gjennom Nakkedalen.
             </p>
             
-            <iframe className="contact-maps" title="sjursnes" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=Sjursnes&key=AIzaSyDpSenFvkglwJKPpgittKgOIk2F8pJN3LE">
+            <iframe className="contact-maps" title="sjursnes" loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/search?q=Sjursnes&key=AIzaSyDpSenFvkglwJKPpgittKgOIk2F8pJN3LE">
             </iframe>
             </div>
             </div>
