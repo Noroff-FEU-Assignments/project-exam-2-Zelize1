@@ -16,7 +16,6 @@ function BlogPost() {
 
                 if(response.ok) {
                     const json = await response.json();
-                    console.log(json[0]);
                     setPosts(json);
                 } else {
                     setError("Can't log blog post");

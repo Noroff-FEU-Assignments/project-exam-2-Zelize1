@@ -20,7 +20,6 @@ export default function Courses() {
 
                 if (response.ok) {
                     const json = await response.json();
-                    console.log(json);
                     setCourses(json);
                 } else {
                     setError("Can't load courses");

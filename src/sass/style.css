@@ -12,11 +12,29 @@
   transition: 0.25s;
 }
 
-.navbar-logo {
-  width: 38%;
+.logo-text {
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-#navbar-logo-text {
+#sol {
+  font-weight: 600;
+  color: #f0a54b;
+}
+
+#hjerter {
+  font-weight: 900;
+}
+
+.logo-text:hover {
+  color: #E6795F;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  width: 40%;
+}
+
+.navbar-icon {
   display: none;
 }
 
@@ -40,10 +58,9 @@ body {
   .navbar-logo {
     display: none;
   }
-  #navbar-logo-text {
-    font-family: "Roboto Condensed", sans-serif;
-    display: block;
-    float: left;
+  .navbar-icon {
+    display: none;
+    width: 55%;
   }
 }
 
@@ -67,6 +84,11 @@ h3 {
 
 .carousel-indicators .active {
   background-color: #E6795F;
+}
+
+.carousel-text {
+  color: white;
+  text-shadow: 1px 2px black;
 }
 
 h2 {
@@ -106,11 +128,6 @@ p {
   font-family: "Roboto", sans-serif;
   text-align: left;
   width: 100%;
-}
-
-.carousel-text {
-  color: white;
-  text-shadow: 2px 3px black;
 }
 
 .phantom {
@@ -207,7 +224,7 @@ h1, h2, h3, h4, h5, a {
 }
 
 .card-container {
-  max-width: 90%;
+  max-width: 80%;
 }
 
 .form-row {
@@ -314,8 +331,62 @@ h1, h2, h3, h4, h5, a {
 @media screen and (max-width: 1250px) {
   .left-container, .right-container {
     width: 100%;
-    height: 300px;
     float: none;
+    margin-bottom: -25%;
   }
+  .split-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-directions-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-directions, .contact-maps {
+    width: 50%;
+    display: block;
+    margin: auto;
+    width: 90%;
+  }
+  .contact-directions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .contact-maps {
+    margin-top: 30px;
+  }
+  .signup-form input, .signup-form textarea {
+    width: 80%;
+  }
+  .contact-submit {
+    width: 40%;
+  }
+}
+
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
 }
 /*# sourceMappingURL=style.css.map */
