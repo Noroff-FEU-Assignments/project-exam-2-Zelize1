@@ -19,4 +19,10 @@
   width: 50%;
   margin: 10px;
 }
+
+@media (max-width: 1250px) {
+  .form-control {
+    width: 80%;
+  }
+}
 /*# sourceMappingURL=signup.css.map */

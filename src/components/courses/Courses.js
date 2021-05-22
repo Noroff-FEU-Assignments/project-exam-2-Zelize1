@@ -11,6 +11,8 @@ export default function Courses() {
     const [error, setError] = useState(null);
 
     const coursesUrl = baseUrl + "/courses";
+    
+    
 
     useEffect(function () {
         async function fetchCourses() {
@@ -30,8 +32,10 @@ export default function Courses() {
             }
         }
         fetchCourses();
+        
 
     }, );
+
 
     if (loading) {
         return <div>Laster inn...</div>;
@@ -40,6 +44,8 @@ export default function Courses() {
     if (error) {
         return <div>Kunne ikke laste innhold...</div>
     }
+
+
 
     return (
         <>
@@ -51,17 +57,17 @@ export default function Courses() {
             {courses.map(function (course) {
                 return <>
             
-            <Card className="card-container">
+            <Card className="course-card">
                     <Card.Body className="course-card-body">
                         <Card.Title>{course.Title}</Card.Title>
                         <Card.Text>
                             {course.Description}
                         </Card.Text>
-                        <button className="button">Go somewhere</button>
+                        <a href="/courses"><button className="button" id="course-button">Meld deg på nå!</button></a>
                     </Card.Body>
                     </Card>
 
-                  
+
                 
                 </>
                 })}

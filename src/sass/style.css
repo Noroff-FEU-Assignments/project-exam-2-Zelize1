@@ -165,8 +165,8 @@ p {
   float: right;
 }
 
-.container .aboutContainer {
-  width: 70%;
+.aboutContainer {
+  width: 50%;
   margin: auto;
 }
 
@@ -177,20 +177,33 @@ p {
   text-align: left;
 }
 
+@media (max-width: 1550px) {
+  .aboutContainer {
+    width: 80%;
+  }
+}
+
 @media (max-width: 1075px) {
   .aboutImg {
     width: 250px;
     margin: auto;
     display: block;
+    margin-top: 20px;
+    float: none;
   }
-  .container .aboutContainer {
-    width: 70%;
+  .aboutContainer {
+    width: 100%;
     margin: auto;
+    display: block;
+    margin-bottom: 30px;
   }
   .aboutText {
-    padding-left: 30px;
-    padding-top: 30px;
     text-align: center;
+    float: none;
+    margin: auto;
+    display: block;
+    padding-right: 20px;
+    width: 90%;
   }
 }
 
@@ -234,16 +247,24 @@ a:hover {
 
 .course-card-body {
   border-style: none;
-  width: 80;
 }
 
 .course-card {
   border-style: none;
-  background-color: transparent !important;
 }
 
 .card-container {
-  width: 80%;
+  width: 70%;
+}
+
+@media (max-width: 1250px) {
+  .card-container {
+    width: 90%;
+    margin-top: 3%;
+  }
+  #course-button {
+    width: 60%;
+  }
 }
 
 .form-row {
@@ -268,9 +289,16 @@ a:hover {
   margin: 10px;
 }
 
+@media (max-width: 1250px) {
+  .form-control {
+    width: 80%;
+  }
+}
+
 .split-wrapper {
   width: 100%;
   overflow: auto;
+  margin-top: 7%;
 }
 
 .signup-form {
@@ -332,7 +360,7 @@ a:hover {
   .left-container, .right-container {
     width: 100%;
     float: none;
-    margin-bottom: -25%;
+    margin-bottom: -5%;
   }
   .split-wrapper {
     display: -webkit-box;
@@ -395,6 +423,44 @@ a:hover {
 }
 
 .login-fieldset {
+  width: 30%;
+}
+
+@media (max-width: 1250px) {
+  .login-fieldset {
+    width: 80%;
+  }
+}
+
+.display-posts {
+  display: block;
+  margin: auto;
   width: 60%;
+  background-color: #313131;
+  margin-top: 20px;
+}
+
+.display-posts ul li {
+  list-style-type: none;
+  text-align: left;
+  font-size: 26px;
+  margin-left: -20px;
+  padding: 5px;
+}
+
+.display-posts ul li a:hover {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .display-posts {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1250px) {
+  #admin-button {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

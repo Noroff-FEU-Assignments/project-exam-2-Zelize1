@@ -20,6 +20,12 @@
 }
 
 .login-fieldset {
-  width: 60%;
+  width: 30%;
+}
+
+@media (max-width: 1250px) {
+  .login-fieldset {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=login.css.map */

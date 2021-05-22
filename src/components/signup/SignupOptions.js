@@ -42,7 +42,7 @@ export default function SignupOptions() {
             {courses.map(function (course) {
                 return <>
                 
-        <option value="Kurs 1">{course.Title}</option>
+        <option value="Kurs 1" className="form-control">{course.Title}</option>
 
            </>     
                 })}

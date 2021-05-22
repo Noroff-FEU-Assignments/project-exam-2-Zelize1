@@ -42,12 +42,14 @@ function BlogPost() {
             {posts.map(function (post) {
                 return (
 
-                <Card className="text-center">
-                    <Card.Body>
+                <Card className="blog-card">
+                    <Card.Body className="blog-card-body">
                         <Card.Title>{post.Title}</Card.Title>
                         <Card.Text>{post.Body}</Card.Text>
                     </Card.Body>
-                <Card.Footer className="text-muted">{post.Posted}</Card.Footer>
+                <Card.Footer className="text-muted">
+                    {post.Posted}
+                    </Card.Footer>
                 </Card>
 
             )})}

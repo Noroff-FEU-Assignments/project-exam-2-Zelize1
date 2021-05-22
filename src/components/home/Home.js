@@ -29,8 +29,8 @@ export default function Home() {
                 </Carousel.Item>
             </Carousel>
 
-            <h2>Rehabiliterende yoga i vakker nord-norsk natur</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <h2 className="home-title">Rehabiliterende yoga i vakker nord-norsk natur</h2>
+            <p className="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Aenean dignissim arcu at malesuada aliquet. 
 Etiam in velit vitae est consequat dictum in eu ex. 
 Nunc sagittis ultricies nulla. Donec ac magna lorem. 
@@ -42,7 +42,7 @@ Morbi congue maximus nulla, ac sodales eros feugiat et.
 
 
         <a href="/courses">
-            <button className="button" size="lg" block >
+            <button className="button" size="lg" block id="home-button" >
                 Sjekk ut kursoversikten!
             </button>
         </a>

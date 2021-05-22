@@ -87,7 +87,7 @@ export default function EditPost() {
             <input type="date" placeholder="Dato" defaultValue={post.Posted} className="form-control" {...register("Posted", {required: true})}/>
 
 
-            <button variant="primary" type="submit" className="button" size="lg" block>
+            <button variant="primary" type="submit" className="button" size="lg" block id="edit-button">
             {updatingPost ? "Sender inn..." : "Send inn"}
             </button>
             <PostsDeleteButton id={post.id} />

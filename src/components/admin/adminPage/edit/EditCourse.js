@@ -85,7 +85,7 @@ export default function EditCourse() {
             {errors.Body && <span>Legg til tekst</span>}
 
 
-            <button variant="primary" type="submit" className="button" size="lg" block>
+            <button variant="primary" type="submit" className="button" size="lg" block id="edit-button">
             {updatingCourse ? "Sender inn..." : "Send inn"}
             </button>
             <CoursesDeleteButton id={course.id} />
