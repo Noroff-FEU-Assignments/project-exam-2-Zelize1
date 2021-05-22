@@ -1,0 +1,18 @@
+.display-posts{
+    display: block;
+    margin: auto;
+    width: 60%;
+    background-color: $colour-secondary;
+    margin-top: 20px;
+    box-shadow: 2px 3px $colour-secondary;
+}
+
+.display-posts ul li {
+    list-style-type: none;
+    text-align: left;
+    font-size: 26px;
+}
+
+.display-posts ul li a:hover  {
+    color: white;
+}

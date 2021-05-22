@@ -9,6 +9,10 @@ import About from "./components/about/About";
 import Courses from "./components/courses/Courses";
 import Login from "./components/admin/login/Login";
 import AdminPage from "./components/admin/adminPage/AdminPage";
+import AddContent from "./components/admin/adminPage/AddContent";
+import UpdateContent from "./components/admin/adminPage/UpdateContent";
+import EditPost from "./components/admin/adminPage/edit/EditPost";
+import EditCourse from "./components/admin/adminPage/edit/EditCourse";
 
 import './sass/style.scss';
 
@@ -26,7 +30,12 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />
-        <Route path="/admin-page" component={AdminPage} />
+        <Route path="/admin-page" exact component={AdminPage} />
+        <Route path="/add-content" component={AddContent} />
+        <Route path="/update-content" component={UpdateContent} />
+        <Route path="/admin/admin-page/edit-post/:id" component={EditPost} />
+        <Route path="/admin/admin-page/edit-course/:id" component={EditCourse} />
+
     </Switch>
       </Router>
     </AuthProvider>

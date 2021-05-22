@@ -1,6 +1,6 @@
 .course-card-body {
   border-style: none;
-  padding-left: 0;
+  width: 80;
 }
 
 .course-card {
@@ -9,6 +9,6 @@
 }
 
 .card-container {
-  max-width: 80%;
+  width: 80%;
 }
 /*# sourceMappingURL=courses.css.map */

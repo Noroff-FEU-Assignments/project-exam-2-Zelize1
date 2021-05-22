@@ -5,8 +5,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { baseUrl, authUrl } from "../../../settings/constants/api";
 import LoginError from "./LoginError";
-import Button from 'react-bootstrap/Button';
 import AuthContext from "../../../context/AuthContext";
+import { useHistory } from "react-router-dom";
 
 const url = baseUrl + authUrl;
 
@@ -23,6 +23,7 @@ export default function LoginForm() {
         resolver: yupResolver(schema),
     });
 
+    const history = useHistory();
     const [, setAuth] = useContext(AuthContext);
     
     async function onSubmit(data) {
@@ -35,11 +36,13 @@ export default function LoginForm() {
             const response = await axios.post(url, data);
             console.log(response.data);
             setAuth(response.data);
+            history.push("/admin-page")
         } catch (error) {
             console.log("error", error);
             setLoginError(error.toString());
         } finally {
             setSubmitting(false);
+
         }
     }
 
@@ -57,9 +60,9 @@ export default function LoginForm() {
             <input name="password" type="password" placeholder="Ditt passord" className="login-input" {...register("password")} />
             {errors.password && <span>Fyll inn passordet ditt</span>}
             </div>
-            <Button variant="primary" className="contact-submit" type="submit" size="lg" block>
+            <button className="button" type="submit" size="lg" block>
                 {submitting ? "Logger inn..." : "Logg inn"}
-            </Button>
+            </button>
         </fieldset>
         </form>
         </>

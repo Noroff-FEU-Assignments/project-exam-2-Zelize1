@@ -34,8 +34,8 @@ function Layout() {
       {auth ? (
         <>
             
-            <Nav.Link href="/admin-page">Adminside</Nav.Link>
-            <Nav.Link onClick={logout}>Logg ut</Nav.Link>
+            <Nav.Link href="/admin-page">ADMINSIDE</Nav.Link>
+            <Nav.Link onClick={logout}>LOGG UT</Nav.Link>
         </>
       ) : ( <Nav.Link href="/login"></Nav.Link>
       )}

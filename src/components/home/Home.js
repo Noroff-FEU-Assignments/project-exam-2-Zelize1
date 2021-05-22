@@ -1,6 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel'
 import "../../sass/style.scss";
-import Button from 'react-bootstrap/Button';
 import BlogPost from "../blog/BlogPost";
 
 
@@ -41,10 +40,12 @@ Suspendisse neque ante, iaculis vel libero vel, efficitur interdum ex.
 Morbi congue maximus nulla, ac sodales eros feugiat et. 
 </p>
 
-            <Button variant="primary" size="lg" block>
-                Sjekk ut kursoversikten!
-            </Button>
 
+        <a href="/courses">
+            <button className="button" size="lg" block >
+                Sjekk ut kursoversikten!
+            </button>
+        </a>
             <BlogPost />
             
             </>

@@ -16,13 +16,7 @@
 }
 
 .form-control {
-  width: 300px;
+  width: 50%;
   margin: 10px;
-}
-
-.signup-submit {
-  margin: auto;
-  width: 100px;
-  display: block;
 }
 /*# sourceMappingURL=signup.css.map */

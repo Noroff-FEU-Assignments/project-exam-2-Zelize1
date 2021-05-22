@@ -103,10 +103,14 @@ p {
   width: 65%;
 }
 
-.btn-primary {
-  width: 65%;
+.button {
+  width: 45%;
   margin: auto;
   margin-top: 40px;
+  display: block;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .card {
@@ -199,23 +203,38 @@ h1, h2, h3, h4, h5, a {
   color: #E6795F;
 }
 
-.btn-primary {
+#delete-button {
+  background-color: red;
+}
+
+.button {
   background-color: #E6795F;
   border-color: #313131;
   color: #313131;
   font-family: "Roboto Condensed", sans-serif;
+  width: 25%;
+  margin: auto;
+  margin-top: 40px;
+  display: block;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px;
 }
 
-.btn-primary:hover {
+.button:hover {
   background-color: #e65a25;
   border-color: #313131;
   color: #313131;
   font-family: "Roboto Condensed", sans-serif;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .course-card-body {
   border-style: none;
-  padding-left: 0;
+  width: 80;
 }
 
 .course-card {
@@ -224,7 +243,7 @@ h1, h2, h3, h4, h5, a {
 }
 
 .card-container {
-  max-width: 80%;
+  width: 80%;
 }
 
 .form-row {
@@ -247,18 +266,6 @@ h1, h2, h3, h4, h5, a {
 .form-control {
   width: 50%;
   margin: 10px;
-}
-
-.signup-submit {
-  margin: auto;
-  width: 15%;
-  display: block;
-  font-size: 15px;
-  margin-top: 10px;
-  background-color: #E6795F;
-  border-color: #313131;
-  color: #313131;
-  font-family: "Roboto Condensed", sans-serif;
 }
 
 .split-wrapper {
@@ -321,13 +328,6 @@ h1, h2, h3, h4, h5, a {
   margin-top: 50px;
 }
 
-.contact-submit {
-  margin: auto;
-  width: 15%;
-  display: block;
-  font-size: 15px;
-}
-
 @media screen and (max-width: 1250px) {
   .left-container, .right-container {
     width: 100%;
@@ -368,7 +368,7 @@ h1, h2, h3, h4, h5, a {
   .signup-form input, .signup-form textarea {
     width: 80%;
   }
-  .contact-submit {
+  .button {
     width: 40%;
   }
 }
@@ -387,6 +387,14 @@ h1, h2, h3, h4, h5, a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 50px;
+}
+
+.login-input {
+  width: 100%;
+  margin: 10px;
+}
+
+.login-fieldset {
+  width: 60%;
 }
 /*# sourceMappingURL=style.css.map */

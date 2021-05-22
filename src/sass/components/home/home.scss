@@ -10,10 +10,14 @@ p {
     width: 65%;
 }
 
-.btn-primary {
-    width: 65%;
+.button {
+    width: 45%;
     margin: auto;
     margin-top: 40px;
+    display: block;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
 }
 
 .card {

@@ -1,6 +1,5 @@
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container"
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { baseUrl } from "../../settings/constants/api";
 import { useState, useEffect } from "react";
@@ -52,19 +51,17 @@ export default function Courses() {
             {courses.map(function (course) {
                 return <>
             
-                    <Col>
-                        <Card className="course-card" key={course.id} style={
-                            {width: '18rem'}
-                        }>
-                            <Card.Img variant="top" src={baseUrl + course.Image.url}  className="course-card-img" style={{height: "13rem"}}/>
-                            <Card.Body className="course-card-body">
-                                <Card.Title>{course.Title}</Card.Title>
-                                <Card.Text>
-                                    {course.Description} 
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+            <Card className="card-container">
+                    <Card.Body className="course-card-body">
+                        <Card.Title>{course.Title}</Card.Title>
+                        <Card.Text>
+                            {course.Description}
+                        </Card.Text>
+                        <button className="button">Go somewhere</button>
+                    </Card.Body>
+                    </Card>
+
+                  
                 
                 </>
                 })}

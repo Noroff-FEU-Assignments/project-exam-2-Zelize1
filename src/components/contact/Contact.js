@@ -1,6 +1,6 @@
 import Heading from "../layout/Heading";
 import { useForm } from 'react-hook-form';
-import Button from 'react-bootstrap/Button';
+
 
 export default function Contact() {
 
@@ -20,9 +20,9 @@ export default function Contact() {
       <input type="text" placeholder="Emne" className="form-control" {...register("Emne", {required: true, min: 10, maxLength: 80})} />
       <textarea className="form-control" {...register("Melding", {required: true, maxLength: 350})} />
 
-      <Button variant="primary" className="contact-submit" type="submit" size="lg" block>
+      <button className="button" type="submit" size="lg" block>
                 Send inn
-            </Button>
+            </button>
     </form>
             </div>
             <div className="right-container">
