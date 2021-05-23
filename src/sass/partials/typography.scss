@@ -34,3 +34,17 @@ h1, h2, h3, h4, h5, a {
 a:hover {
     text-decoration: none;
 }
+
+.loading-div {
+    padding-top: 15%;
+    display: block;
+    margin: auto;
+    width: 15%;
+}
+
+
+@media (max-width: 1250px) {
+    .loading-div {
+        width: 30%;
+    }
+}

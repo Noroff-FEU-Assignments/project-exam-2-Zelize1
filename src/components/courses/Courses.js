@@ -38,11 +38,11 @@ export default function Courses() {
 
 
     if (loading) {
-        return <div>Laster inn...</div>;
+        return <div className="loading-div">Laster inn...</div>;
     }
 
     if (error) {
-        return <div>Kunne ikke laste innhold...</div>
+        return <div className="loading-div">Kunne ikke laste innhold...</div>
     }
 
 

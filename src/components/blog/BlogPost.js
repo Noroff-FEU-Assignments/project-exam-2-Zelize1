@@ -30,11 +30,11 @@ function BlogPost() {
     }, );
 
     if(loading) {
-        return <div>Laster inn...</div>;
+        return <div className="loading-div">Laster inn...</div>;
     }
 
     if (error) {
-        return <div>Kunne ikke laste inn</div>;
+        return <div className="loading-div">Kunne ikke laste inn</div>;
     }
 
     return (
