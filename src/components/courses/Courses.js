@@ -63,7 +63,7 @@ export default function Courses() {
                         <Card.Text>
                             {course.Description}
                         </Card.Text>
-                        <a href="/courses"><button className="button" id="course-button">Meld deg på nå!</button></a>
+                        <a href="/signup"><button className="button" id="course-button">Meld deg på nå!</button></a>
                     </Card.Body>
                     </Card>
 
